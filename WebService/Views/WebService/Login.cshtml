@@ -1,0 +1,51 @@
+﻿@model WebService.Models.Account
+
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "WebService", FormMethod.Post))
+{
+    <div style="padding: 200px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-info" style="text-align: center; background-color:lightseagreen">
+                            <h4>登入</h4>
+                        </div>
+                        <div class="card-body">
+                            @Html.ValidationSummary()
+                            <br />
+                            <div class="form-group row" style="margin:auto">
+                                @Html.Label("帳號")
+                                @Html.TextBoxFor(m => m.Id, new { @class = "form-control", Required = "required" })
+                            </div>
+                            <br />
+                            <div class="form-group row" style="margin:auto">
+                                @Html.Label("密碼")
+                                @Html.Password("Password", "", new { @class = "form-control", Required = "required" })
+                            </div>
+                            <br /><br />
+                            <label style="color:red">@ViewBag.Errmsg</label>
+                            <div class="form-group row" style="margin:auto">
+                                <button class="btn btn-lg btn-success" type="submit">送出</button>
+                                @ViewBag.Message
+                            </div>
+                            <br />
+                            @Html.ActionLink("回首頁", "Index", "WebService")
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+

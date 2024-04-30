@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebService_Auto_Testing_Service_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.22.246.201/Auto_Testing_Service/Service.asmx</Value>
+    </Setting>
+    <Setting Name="WebService_FIMPWS_SFIS_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.22.246.200/FIMPWS/SFIS_WS.asmx</Value>
+    </Setting>
+    <Setting Name="WebService_FIMPWS_MS_EXT_SFIS_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.22.246.201/FIMPWS_MS_EXT/SFIS_WS.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

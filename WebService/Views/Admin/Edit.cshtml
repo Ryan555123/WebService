@@ -1,0 +1,54 @@
+﻿@model WebService.WebServiceData
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Edit", "Admin", FormMethod.Post))
+{
+    <div style="padding: 100px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark" style="text-align: center;">
+                            <h4>更新</h4>
+                        </div>
+                        <div class="card-body">
+                            @Html.ValidationSummary()
+                            @Html.HiddenFor(m => m.Id)
+                            <br />
+                            <div class="form-group row" style="margin:auto">
+                                @Html.DisplayNameFor(m => m.Type)
+                                @Html.TextBoxFor(m => m.Type, new { @class = "form-control" })
+                            </div>
+                            <br />
+                            <div class="form-group row" style="margin:auto">
+                                @Html.DisplayNameFor(m => m.IP)
+                                @Html.TextBoxFor(m => m.IP, new { @class = "form-control" })
+                            </div>
+                            <br />
+                            <div class="form-group row" style="margin:auto">
+                                @Html.DisplayNameFor(m => m.XMLString)
+                                @Html.TextAreaFor(m => m.XMLString, new { @class = "form-control", style = "height: 200px;" })
+                            </div>
+                            <br /><br />
+                            <div class="form-group row" style="margin:auto">
+                                <button class="btn btn-lg btn-success" type="submit">送出</button>
+                            </div>
+                            <br />
+                            @Html.ActionLink("回上一頁", "AdminIndex", "Admin")
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+}
+
